@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deniz Temizleme</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(#87CEEB,#1E90FF);
+    overflow:hidden;
+}
+
+header{
+    background:#006994;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+#topBar{
+    display:flex;
+    justify-content:space-around;
+    background:#003B5C;
+    color:white;
+    padding:15px;
+    font-size:22px;
+}
+
+#sea{
+    position:relative;
+    width:100%;
+    height:80vh;
+    background:linear-gradient(#5CC8FF,#0077BE);
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.item{
+    position:absolute;
+    font-size:40px;
+    user-select:none;
+}
+
+#endScreen{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:rgba(0,0,0,.8);
+    color:white;
+}
+
+button{
+    padding:15px 35px;
+    font-size:22px;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>🌊 Deniz Temizleme</h1>
+
+<p>Çöpleri topla, balıklara dokunma!</p>
+
+</header>
+
+<div id="topBar">
+
+<div>
+⭐ Puan:
+<span id="score">0</span>
+</div>
+
+<div>
+🗑 Toplanan Çöp:
+<span id="trash">0</span>/20
+</div>
+
+<div>
+❤️ Can:
+<span id="life">3</span>
+</div>
+
+</div>
+
+<div id="sea"></div>
+
+<div id="endScreen">
+
+<h1 id="result"></h1>
+
+<button onclick="location.reload()">
+Tekrar Oyna
+</button>
+
+<br>
+
+<a href="index.html">
+<button>
+Ana Menü
+</button>
+</a>
+
+</div>
+
+<script src="game4.js"></script>
+
+</body>
+</html>
